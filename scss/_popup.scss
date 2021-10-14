@@ -1,0 +1,42 @@
+h3 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: none;
+    z-index: 10;
+}
+
+.content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    height: 600px;
+    width: 400px;
+    background: #fff;
+    border-radius: 30px;
+    padding: 2em;
+    z-index: 20;
+
+    & h3 {
+        background: transparent;
+        margin-bottom: 1em;
+    }
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 250ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+
+}

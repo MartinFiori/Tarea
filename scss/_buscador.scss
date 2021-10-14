@@ -1,0 +1,19 @@
+.buscador {
+    background: #fff;
+    width: 345px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.226);
+    overflow: hidden;
+    font-size: 2rem;
+    padding: 1em;
+    margin-block: 2rem;
+}
+
+.buscador__input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+}

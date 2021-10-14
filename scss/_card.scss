@@ -1,0 +1,70 @@
+.card {
+    background: #fff;
+    border: 4px solid #f00;
+    width: 650px;
+    height: 125px;
+    margin-block: 2rem;
+    padding: 0.4rem;
+    border-radius: 20px;
+
+    & h2 {
+        text-align: center;
+        font-size: 2.4rem;
+        margin-bottom: .7em;
+    }
+
+    & p {
+        font-size: 1.4rem;
+        text-align: left;
+    }
+
+
+    & .contenido {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        line-height: 35px;
+        margin: 0 15px 0 -15px;
+
+        &__contador {
+            display: flex;
+            flex-direction: row;
+            background-color: #444444;
+            width: 110px;
+            margin-left: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+
+            & p {
+                font-size: 25px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                width: calc(110px/3);
+                color: #fff;
+            }
+        }
+
+        &__descripcion {
+            width: 400px;
+        }
+
+        &__precio p {
+            font-size: 22px;
+        }
+    }
+
+    & .btn-carrito {
+        font-size: 25px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        width: calc(111px/3);
+        color: #fff;
+        cursor: pointer;
+        background: rgb(168, 168, 168);
+        border: none;
+        outline: none;
+    }
+}
