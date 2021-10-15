@@ -30,11 +30,15 @@ minus.forEach(boton => {
 })
 
 
+// $('.card__titulo').click(function () {
+//     $('.contenido').animate({
+//         height: "toggle"
+//     })
+// })
 
 
-let contenido1 = document.getElementById('counter1')
-function sumar1() {
-    largo1.push(1)
-    contenido1.innerText = largo1.length
-}
-plus.addEventListener('click', sumar1())
+$('.card1').click(function () {
+    $('.toggle1').animate({
+        height: "toggle"
+    })
+})

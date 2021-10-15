@@ -15,6 +15,7 @@ const largo10 = []
 
 
 
+
 class Producto {
     constructor(id, name, price, description, img) {
         this.id = id;
