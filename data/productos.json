@@ -1,0 +1,71 @@
+[{
+        "id": 1,
+        "name": "Papas",
+        "price": 240,
+        "description": "Cono de papas",
+        "img": "./assets/productos/papas.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Shawarma",
+        "price": 510,
+        "description": "Carne sazonada dentro de pan de pita",
+        "img": "./assets/productos/shawarma.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Hamburguesa",
+        "price": 440,
+        "description": "Medallon,Cheddar,Bacon,Lechuga,Tomate,Pepinillos,Salsa Especial",
+        "img": "./assets/productos/hamburguesa.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Shis",
+        "price": 690,
+        "description": "Carne o Pollo o Cerdo o Morcilla + Jamon, Queso, Huevo, Lechuga, Tomate, Arvejas, Choclo y Mayonesa",
+        "img": "./assets/productos/shis.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Tacos",
+        "price": 600,
+        "description": "Corte fino de carne de la parte intermedia de la vaca o cerdo",
+        "img": "./assets/productos/tacos.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Tequeños",
+        "price": 320,
+        "description": "Masa de harina de trigo frita, rellena de queso blanco",
+        "img": "./assets/productos/tequenios.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Empanadas",
+        "price": 720,
+        "description": "Una fina masa de pan con relleno",
+        "img": "./assets/productos/empanadas.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Pizza",
+        "price": 430,
+        "description": "Pan plano elaborado con harina de trigo, levadura, agua y sal que tradicionalmente se cubre con salsa de tomate",
+        "img": "./assets/productos/pizza.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Nachos",
+        "price": 390,
+        "description": "Consisten en capas y capas de totopos de maíz, con todo tipo de salsas picantes, carne picada y queso fundido",
+        "img": "./assets/productos/nachos.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Canastitas",
+        "price": 130,
+        "description": "Canastitas rellenas de jamón, queso y choclo",
+        "img": "./assets/productos/canastitas.jpg"
+    }
+]
