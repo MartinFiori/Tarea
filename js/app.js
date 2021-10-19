@@ -108,6 +108,5 @@ function crearCards(array) {
     contador10()
 }
 
-crearCards(productos)
 
 
