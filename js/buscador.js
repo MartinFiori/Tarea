@@ -20,10 +20,12 @@ buscador.addEventListener("input", () => {
 
 // FILTRADO DE PRODUCTO
 const filtrar = ()=>{
-    console.log(buscador.value);
     const texto = buscador.value.toLowerCase();
     for (const producto of productos) {
         let nombre = producto.name.toLowerCase();
+        if(nombre.indexOf(texto) !== -1){
+            console.log(texto.name.length);
+        }
     }
 }
 
