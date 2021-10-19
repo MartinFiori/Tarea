@@ -6,12 +6,15 @@
     margin-block: 2rem;
     padding: 0.4rem;
     border-radius: 20px;
+    position: relative;
 
     & h2 {
         text-align: center;
+        text-align: left;
         font-size: 2.4rem;
         margin-bottom: .7em;
-        cursor: default;
+        margin-left: .6em;
+        cursor: pointer;
         user-select: none;
         -webkit-user-select: none;
         -moz-user-select: none;
@@ -73,4 +76,21 @@
         border: none;
         outline: none;
     }
+    .arrow{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+        transition: all 250ms ease-out;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.rotar{
+    transform: rotate(180deg);
 }

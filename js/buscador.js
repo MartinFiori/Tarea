@@ -16,17 +16,3 @@ buscador.addEventListener("input", () => {
         cross.classList.remove("display")
     }
 });
-
-
-// FILTRADO DE PRODUCTO
-const filtrar = ()=>{
-    const texto = buscador.value.toLowerCase();
-    for (const producto of productos) {
-        let nombre = producto.name.toLowerCase();
-        if(nombre.indexOf(texto) !== -1){
-            console.log(texto.name.length);
-        }
-    }
-}
-
-buscador.addEventListener('keyup', filtrar)

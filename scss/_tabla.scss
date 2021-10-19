@@ -1,0 +1,30 @@
+.contenidoTabla {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+
+    & thead tr {
+        background-color: rgb(255, 0, 0);
+        color: #fff;
+        text-align: left;
+        font-weight: bold;
+
+
+    }
+
+    th,
+    td {
+        padding: 12px 10px;
+    }
+    & tbody tr{
+        border-bottom: 1px solid #dddddd
+    }
+    & tbody tr:nth-of-type(even){
+        background: #f3f3f3;
+    }
+    & tbody tr:last-of-type{
+        border-bottom: 2px solid #f00;
+    }
+}

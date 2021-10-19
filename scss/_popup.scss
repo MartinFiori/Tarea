@@ -7,6 +7,7 @@ h3 {
     position: fixed;
     top: 0;
     left: 0;
+    background: rgba(0, 0, 0, 0.6);
     min-height: 100vh;
     min-width: 100vw;
     display: none;
@@ -18,8 +19,8 @@ h3 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    height: 600px;
-    width: 400px;
+    height: auto;
+    width: 600px;
     background: #fff;
     border-radius: 30px;
     padding: 2em;
@@ -38,5 +39,8 @@ h3 {
 .popup.active .content {
     transition: all 250ms ease-in-out;
     transform: translate(-50%, -50%) scale(1);
-
 }
+
+
+
+// Tabla del carrito

@@ -1,7 +1,7 @@
 .cart {
     position: fixed;
     top: 150px;
-    right: 100px;
+    right: 50px;
     font-size: 25px;
     height: 65px;
     width: 65px;
@@ -12,4 +12,9 @@
     border-radius: 50%;
     cursor: pointer;
     z-index: 1000;
+    transition: background 250ms ease-in;
+    &:hover{
+        background: rgb(97, 97, 97);
+    }
 }
+
