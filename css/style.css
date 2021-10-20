@@ -65,9 +65,14 @@ h3 {
   border-radius: 50%;
   cursor: pointer;
   z-index: 1000;
-  transition: background 250ms ease-in; }
+  display: none;
+  transform: scale(0);
+  transition: background 150ms ease-in; }
   .cart:hover {
     background: #616161; }
+
+.enabled {
+  display: block; }
 
 .card {
   background: #fff;
@@ -185,17 +190,20 @@ h3 {
   font-size: 1rem;
   border-radius: 10px;
   overflow: hidden;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
   .contenidoTabla thead tr {
     background-color: red;
     color: #fff;
-    text-align: left;
     font-weight: bold; }
     .contenidoTabla thead tr th:last-of-type {
       text-align: center; }
   .contenidoTabla th,
   .contenidoTabla td {
     padding: 12px 10px; }
+    .contenidoTabla th:first-of-type,
+    .contenidoTabla td:first-of-type {
+      text-align: left; }
   .contenidoTabla tbody tr {
     border-bottom: 1px solid #dddddd; }
     .contenidoTabla tbody tr td:last-of-type {
@@ -204,3 +212,34 @@ h3 {
     background: #f3f3f3; }
   .contenidoTabla tbody tr:last-of-type {
     border-bottom: 2px solid #f00; }
+
+.finalizarCompra {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-block: 1rem;
+  border: 1px solid #f00;
+  background-color: #fff;
+  color: #f00;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  float: right;
+  position: relative;
+  overflow: hidden;
+  z-index: 2; }
+  .finalizarCompra span {
+    z-index: 2; }
+  .finalizarCompra:hover {
+    color: #fff; }
+  .finalizarCompra::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: calc(-100% - 40px);
+    width: 100%;
+    border-right: 40px solid transparent;
+    border-bottom: 39px solid #f00;
+    transition: all 250ms ease-in-out; }
+  .finalizarCompra:hover::after {
+    left: 0; }

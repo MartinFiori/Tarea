@@ -11,9 +11,9 @@ function crearCards(array) {
                                 </div>
                                 <div class="contenido toggle${element.id}">
                                 <div class="contenido__contador">
-                                        <button type="" class="btn-carrito plus plus${element.id} buy" id="${element.id}">&plus;</button>
-                                        <p id=counter${element.id}></p>
-                                        <button type="" class="btn-carrito minus minus${element.id}" id="${element.id}">&minus;</button>
+                                <button type="" class="btn-carrito minus minus${element.id}" id="${element.id}">&minus;</button>
+                                <p id=counter${element.id}></p>
+                                <button type="" class="btn-carrito plus plus${element.id} buy" id="${element.id}">&plus;</button>
                                 </div>
                                 <div class="contenido__descripcion">
                                         <p>${element.description}</p>
@@ -51,8 +51,8 @@ function crearCards(array) {
 
 
 function carritoUI(carrito) {
+        document.querySelector('#listaCarrito').innerHTML = "";
         for (const producto of carrito) {
-                console.log("funciona");
                 let tableRow = document.createElement('tr');
                 tableRow.innerHTML +=
                         `
@@ -64,3 +64,13 @@ function carritoUI(carrito) {
                 document.querySelector('#listaCarrito').appendChild(tableRow)
         }
 }
+
+
+
+
+let scrolleado = document.querySelector('.cart')
+
+window.addEventListener('scroll', () => {
+        document.querySelector('.cart').classList.add('enabled');
+        document.querySelector('.cart').style.transform = "scale(1)";
+})

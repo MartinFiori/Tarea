@@ -28,6 +28,36 @@ function contador1() {
 }
 
 
+// for (let index = 0; index < 10; i++) {
+//     // ========== counter1
+// function contador[i]() {
+//     let counter[i] = document.querySelector("#counter[i]");
+//     counter[i].innerHTML = largo[i].length;
+
+
+//     let plus[i] = document.querySelector(".plus[i]")
+//     plus[i].addEventListener('click', () => {
+//         largo[i].push(1)
+//         counter[i].innerHTML = ""
+//         counter[i].innerHTML += largo[i].length
+//     })
+
+//     counter[i].innerHTML = largo[i].length;
+
+//     let minus[i] = document.querySelector(".minus[i]")
+//     minus[i].addEventListener('click', () => {
+//         counter[i].innerHTML = "";
+//         largo[i].pop();
+//         counter[i].innerHTML = largo[i].length;
+//     })
+
+
+//     if (largo[i].length < 0) {
+//         largo[i].length = 0
+//     }
+// }
+// }
+
 
 // ========== counter2
 function contador2() {
