@@ -8,6 +8,16 @@ $.get("./data/productos.json", function (datos, estado) {
     // console.log(localDos);
     crearCards(productos)
 
+    
+    let buy = document.getElementsByClassName('.buy')
+
+    buy.addEventListener('click', () =>{
+            console.log("hola");
+    })
+
+
+
+
     let plus = document.querySelectorAll(".plus")
 
     plus.forEach(boton => {
@@ -15,10 +25,12 @@ $.get("./data/productos.json", function (datos, estado) {
             const existe = carrito.find(element => element.id == boton.id)
 
             if (existe == undefined) {
-                const encontrado = productos.find(element => element.id == boton.id)
-                carrito.push(encontrado)
+                const encontrado = productos.find(element => element.id == boton.id);
+                carrito.push(encontrado);
+                localStorage.setItem('idProducto', JSON.stringify(carrito));
             } else {
                 existe.cantidad = existe.cantidad + 1
+                localStorage.setItem('idProducto', JSON.stringify(carrito));
 
             }
         })

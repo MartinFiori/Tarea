@@ -11,7 +11,7 @@ function crearCards(array) {
                                 </div>
                                 <div class="contenido toggle${element.id}">
                                 <div class="contenido__contador">
-                                        <button type="" class="btn-carrito plus plus${element.id}" id="${element.id}">&plus;</button>
+                                        <button type="" class="btn-carrito plus plus${element.id} buy" id="${element.id}">&plus;</button>
                                         <p id=counter${element.id}></p>
                                         <button type="" class="btn-carrito minus minus${element.id}" id="${element.id}">&minus;</button>
                                 </div>
@@ -50,18 +50,17 @@ function crearCards(array) {
 
 
 
-// Comprar Producto
-function comprarProducto(e) {
-        // console.log(e.target.id)
-        let encontrado = carrito.find(producto => producto.id === e.target.id)
-        console.log(encontrado);
-        carrito.push(encontrado)
+function carritoUI(carrito) {
+        for (const producto of carrito) {
+                console.log("funciona");
+                let tableRow = document.createElement('tr');
+                tableRow.innerHTML +=
+                        `
+                        <td>${producto.name}</td>
+                        <td>${producto.cantidad}</td>
+                        <td>${producto.price}</td>
+                        <td><i class="far fa-trash-alt"></i></td>
+                `
+                document.querySelector('#listaCarrito').appendChild(tableRow)
+        }
 }
-
-
-
-
-
-
-
-

@@ -184,17 +184,22 @@ h3 {
   margin: 25px 0;
   font-size: 1rem;
   border-radius: 10px;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%; }
   .contenidoTabla thead tr {
     background-color: red;
     color: #fff;
     text-align: left;
     font-weight: bold; }
+    .contenidoTabla thead tr th:last-of-type {
+      text-align: center; }
   .contenidoTabla th,
   .contenidoTabla td {
     padding: 12px 10px; }
   .contenidoTabla tbody tr {
     border-bottom: 1px solid #dddddd; }
+    .contenidoTabla tbody tr td:last-of-type {
+      text-align: center; }
   .contenidoTabla tbody tr:nth-of-type(even) {
     background: #f3f3f3; }
   .contenidoTabla tbody tr:last-of-type {
