@@ -9,23 +9,31 @@
     position: relative;
 
     & h2 {
-        text-align: center;
+        display: inline;
         text-align: left;
         font-size: 2.4rem;
         margin-bottom: .7em;
         margin-left: .6em;
         cursor: pointer;
-        user-select: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -khtml-user-select: none;
-        -ms-user-select:none;
+        vertical-align: middle;
+        @include user-select;
     }
 
     & p {
         font-size: 1.4rem;
         text-align: left;
     }
+
+    &__img {
+        display: inline;
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        line-height: 50px;
+        vertical-align: middle;
+        @include user-select
+    }
+
 
 
     & .contenido {
@@ -76,9 +84,10 @@
         border: none;
         outline: none;
     }
-    .arrow{
+
+    .arrow {
         position: absolute;
-        top: 10px;
+        top: 20px;
         right: 20px;
         font-size: 20px;
         font-weight: bold;
@@ -88,10 +97,10 @@
         transition: all 250ms ease-out;
         height: 30px;
         width: 30px;
+        @include user-select;
     }
 }
 
-.rotar{
+.rotar {
     transform: rotate(180deg);
 }
-

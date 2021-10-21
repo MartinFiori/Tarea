@@ -12,15 +12,12 @@
     border-radius: 50%;
     cursor: pointer;
     z-index: 1000;
-    display: none;
-    transform: scale(0);
-    transition: background 150ms ease-in;
+    opacity: 1;
+    transition: all 150ms ease-in;
     &:hover{
         background: rgb(97, 97, 97);
     }
 }
 
-.enabled{
-    display: block;
-}
+
 

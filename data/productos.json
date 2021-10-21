@@ -19,7 +19,7 @@
         "name": "Hamburguesa",
         "price": 440,
         "description": "Medallon,Cheddar,Bacon,Lechuga,Tomate.",
-        "img": "./assets/productos/hamburguesa.jpg",
+        "img": "./assets/productos/burger.jpg",
         "cantidad":1
     },
     {

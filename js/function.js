@@ -6,9 +6,11 @@ function crearCards(array) {
                 card.classList.add(`card`);
                 card.classList.add(`card${element.id}`)
                 card.innerHTML += ` <div class="card__titulo title${element.id}">
+                                <img class="card__img" src="${element.img}" alt="${element.name}">
                                 <h2>${element.name}</h2>
                                 <i class="arrow arrow${element.id}">&#9660;</i>
                                 </div>
+
                                 <div class="contenido toggle${element.id}">
                                 <div class="contenido__contador">
                                 <button type="" class="btn-carrito minus minus${element.id}" id="${element.id}">&minus;</button>
@@ -27,7 +29,8 @@ function crearCards(array) {
                 $(`.contenido`).hide()
                 $(`.title${element.id}`).click(function () {
                         $(`.toggle${element.id}`).animate({
-                                height: "toggle"
+                                height: "toggle",
+                                marginTop: "30px"
                         }, 250)
                 })
 
@@ -59,18 +62,8 @@ function carritoUI(carrito) {
                         <td>${producto.name}</td>
                         <td>${producto.cantidad}</td>
                         <td>${producto.price}</td>
-                        <td><i class="far fa-trash-alt"></i></td>
                 `
                 document.querySelector('#listaCarrito').appendChild(tableRow)
         }
 }
 
-
-
-
-let scrolleado = document.querySelector('.cart')
-
-window.addEventListener('scroll', () => {
-        document.querySelector('.cart').classList.add('enabled');
-        document.querySelector('.cart').style.transform = "scale(1)";
-})

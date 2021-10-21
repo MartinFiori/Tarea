@@ -65,14 +65,10 @@ h3 {
   border-radius: 50%;
   cursor: pointer;
   z-index: 1000;
-  display: none;
-  transform: scale(0);
-  transition: background 150ms ease-in; }
+  opacity: 1;
+  transition: all 150ms ease-in; }
   .cart:hover {
     background: #616161; }
-
-.enabled {
-  display: block; }
 
 .card {
   background: #fff;
@@ -84,12 +80,13 @@ h3 {
   border-radius: 20px;
   position: relative; }
   .card h2 {
-    text-align: center;
+    display: inline;
     text-align: left;
     font-size: 2.4rem;
     margin-bottom: .7em;
     margin-left: .6em;
     cursor: pointer;
+    vertical-align: middle;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -98,6 +95,18 @@ h3 {
   .card p {
     font-size: 1.4rem;
     text-align: left; }
+  .card__img {
+    display: inline;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none; }
   .card .contenido {
     display: flex;
     flex-direction: row;
@@ -137,7 +146,7 @@ h3 {
     outline: none; }
   .card .arrow {
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 20px;
     font-size: 20px;
     font-weight: bold;
@@ -146,7 +155,12 @@ h3 {
     cursor: pointer;
     transition: all 250ms ease-out;
     height: 30px;
-    width: 30px; }
+    width: 30px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none; }
 
 .rotar {
   transform: rotate(180deg); }
@@ -187,7 +201,7 @@ h3 {
 .contenidoTabla {
   border-collapse: collapse;
   margin: 25px 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-radius: 10px;
   overflow: hidden;
   width: 100%;
@@ -212,6 +226,16 @@ h3 {
     background: #f3f3f3; }
   .contenidoTabla tbody tr:last-of-type {
     border-bottom: 2px solid #f00; }
+
+.cart__texto {
+  margin-left: 1rem; }
+  .cart__texto p {
+    display: inline;
+    font-size: 1.2rem;
+    margin-left: 10px; }
+
+.mostrarTotal {
+  font-size: 1.2rem; }
 
 .finalizarCompra {
   font-size: 1.2rem;

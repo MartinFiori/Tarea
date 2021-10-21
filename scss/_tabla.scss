@@ -1,7 +1,7 @@
 .contenidoTabla {
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     border-radius: 10px;
     overflow: hidden;
     width: 100%;
@@ -46,6 +46,20 @@
 }
 
 
+.cart__texto {
+    margin-left: 1rem;
+    & p {
+        display: inline;
+        font-size: 1.2rem;
+        margin-left: 10px;
+    }
+}
+
+.mostrarTotal{
+    font-size: 1.2rem;
+}
+
+
 .finalizarCompra {
     font-size: 1.2rem;
     padding: 0.5rem;
@@ -61,9 +75,10 @@
     overflow: hidden;
     z-index: 2;
 
-    & span{
+    & span {
         z-index: 2;
     }
+
     &:hover {
         color: #fff;
     }
