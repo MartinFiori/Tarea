@@ -5,10 +5,13 @@
 
 .body {
   font-size: 62.5%;
-  background: #c8c8c8;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  background-image: url(../assets/fondo.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .title {
   font-size: 6rem;
@@ -78,7 +81,8 @@ h3 {
   margin-block: 2rem;
   padding: 0.4rem;
   border-radius: 20px;
-  position: relative; }
+  position: relative;
+  box-shadow: 0 1px 5px 5px rgba(0, 0, 0, 0.5); }
   .card h2 {
     display: inline;
     text-align: left;
@@ -230,9 +234,10 @@ h3 {
 .cart__texto {
   margin-left: 1rem; }
   .cart__texto p {
-    display: inline;
     font-size: 1.2rem;
-    margin-left: 10px; }
+    margin-right: 45px;
+    text-align: right;
+    font-weight: bold; }
 
 .mostrarTotal {
   font-size: 1.2rem; }

@@ -1,3 +1,4 @@
+// declaro las variables
 const buscador = document.querySelector("#buscador__input");
 const cross = document.querySelector("#cross")
 

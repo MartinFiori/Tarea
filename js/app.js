@@ -1,5 +1,4 @@
-// Agregar al carrito
-
+// Renderizo los productos con JSON
 $.get("./data/productos.json", function (datos, estado) {
     console.log(datos);
     console.log(estado);

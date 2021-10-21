@@ -49,9 +49,11 @@
 .cart__texto {
     margin-left: 1rem;
     & p {
-        display: inline;
+        // display: inline;
         font-size: 1.2rem;
-        margin-left: 10px;
+        margin-right: 45px;
+        text-align: right;
+        font-weight: bold;
     }
 }
 

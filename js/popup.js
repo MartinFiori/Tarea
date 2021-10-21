@@ -1,10 +1,5 @@
 "use strict"
 
-function togglePopup() {
-
-}
-
-
 
 $('#cart').click(() => {
 $('.overlay')

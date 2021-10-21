@@ -1,5 +1,7 @@
 "use strict"
 
+
+// Crear las cards, el slideDown, rotar las flechas y agregar los largos de cada contador
 function crearCards(array) {
         array.forEach(element => {
                 let card = document.createElement('div');
@@ -52,7 +54,7 @@ function crearCards(array) {
 }
 
 
-
+// Mandar los items comprados al carrito
 function carritoUI(carrito) {
         document.querySelector('#listaCarrito').innerHTML = "";
         for (const producto of carrito) {
@@ -62,8 +64,13 @@ function carritoUI(carrito) {
                         <td>${producto.name}</td>
                         <td>${producto.cantidad}</td>
                         <td>${producto.price}</td>
+                        <td>${subtotal(producto.cantidad,producto.price)}</td>
                 `
                 document.querySelector('#listaCarrito').appendChild(tableRow)
         }
 }
 
+// Función para mostrar el sub-total
+let subtotal = (cantidad, price) => {
+        return cantidad * price
+}
