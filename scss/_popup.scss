@@ -1,7 +1,4 @@
-h3 {
-    text-align: center;
-    font-size: 2rem;
-}
+
 
 .overlay {
     position: fixed;
@@ -25,11 +22,6 @@ h3 {
     border-radius: 30px;
     padding: 2em;
     z-index: 20;
-
-    & h3 {
-        background: transparent;
-        margin-bottom: 1em;
-    }
 }
 
 .popup.active .overlay {

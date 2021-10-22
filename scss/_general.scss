@@ -16,7 +16,7 @@
 }
 
 .title {
-    font-size: 6rem;
+    font-size:clamp(2.8rem, 7vw, 6rem);
     text-align: center;
     margin-block: 1em;
 }

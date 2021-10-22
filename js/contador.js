@@ -27,8 +27,13 @@ function contador1() {
     }
 }
 
+for (let i = 0; i < 10; i++) {
+    function contador() {
+        
+    }
+}
 
-// for (let index = 0; index < 10; i++) {
+// for (let i = 0; i < 10; i++) {
 //     // ========== counter1
 // function contador[i]() {
 //     let counter[i] = document.querySelector("#counter[i]");

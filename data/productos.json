@@ -16,9 +16,9 @@
     },
     {
         "id": 3,
-        "name": "Hamburguesa",
+        "name": "Burger",
         "price": 440,
-        "description": "Medallon,Cheddar,Bacon,Lechuga,Tomate.",
+        "description": "Medallon, Cheddar, Bacon, Lechuga, Tomate.",
         "img": "./assets/productos/burger.jpg",
         "cantidad":1
     },

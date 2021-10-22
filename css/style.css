@@ -14,13 +14,9 @@
   background-size: cover; }
 
 .title {
-  font-size: 6rem;
+  font-size: clamp(2.8rem, 7vw, 6rem);
   text-align: center;
   margin-block: 1em; }
-
-h3 {
-  text-align: center;
-  font-size: 2rem; }
 
 .overlay {
   position: fixed;
@@ -43,9 +39,6 @@ h3 {
   border-radius: 30px;
   padding: 2em;
   z-index: 20; }
-  .content h3 {
-    background: transparent;
-    margin-bottom: 1em; }
 
 .popup.active .overlay {
   display: block; }
@@ -186,8 +179,7 @@ h3 {
   border: none;
   outline: none;
   height: 50px;
-  font-size: 2rem;
-  padding-left: 20px; }
+  font-size: 2rem; }
 
 .cross {
   position: absolute;
@@ -272,3 +264,40 @@ h3 {
     transition: all 250ms ease-in-out; }
   .finalizarCompra:hover::after {
     left: 0; }
+
+h3 {
+  font-size: 2rem; }
+
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 100vw; }
+    .card p {
+      text-align: center; }
+    .card .contenido {
+      flex-direction: row;
+      align-items: center; }
+      .card .contenido__contador {
+        flex-direction: column;
+        width: 62px;
+        height: 110px; }
+        .card .contenido__contador p,
+        .card .contenido__contador button {
+          height: calc(110px/3); }
+        .card .contenido__contador h3 {
+          text-align: left; }
+  .cart {
+    top: 10px !important;
+    right: 10px; }
+  .content {
+    width: 100vw;
+    height: 100vh;
+    padding: 20px 0 0 0;
+    border-radius: 0; }
+  .finalizarCompra {
+    margin-right: 30px;
+    margin-top: 5px; }
+  .contenidoTabla {
+    border-radius: 0; }
+    .contenidoTabla th,
+    .contenidoTabla td {
+      padding: 8px 6px !important; } }
