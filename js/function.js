@@ -40,17 +40,23 @@ function crearCards(array) {
                         $(`.arrow${element.id}`).toggleClass('rotar');
                 })
 
+
+                $(`#counter${element.id}`).html("0")
+                let x = $(`#counter${element.id}`).text()
+
+
+                $(`.plus${element.id}`).click(() => {
+                        $(`#counter${element.id}`).text(++x)
+                })
+
+                $(`.minus${element.id}`).click(() => {
+                        $(`#counter${element.id}`).text(--x)
+
+                        if (x < 0) {
+                                $(`#counter${element.id}`).html("0")
+                        }
+                })
         });
-        contador1()
-        contador2()
-        contador3()
-        contador4()
-        contador5()
-        contador6()
-        contador7()
-        contador8()
-        contador9()
-        contador10()
 }
 
 
@@ -73,4 +79,28 @@ function carritoUI(carrito) {
 // Función para mostrar el sub-total
 let subtotal = (cantidad, price) => {
         return cantidad * price
+}
+
+
+// Mostrar carrito cuando hay productos dentro
+function showCarrito() {
+        if (carrito.length <= 0) {
+                $('#cart').hide(0)
+                $('#cart').animate({
+                        "opacity": "0",
+                        "top": "100"
+                }, 0)
+        } else {
+                $('#cart').show(150)
+                $('#cart').animate({
+                        "top": "150",
+                        "opacity": "1"
+                }, 150)
+        }
+}
+
+// Actualizar el precio del total del carrito
+function actualizarPrecio() {
+        let precioTotal = document.getElementById('mostrarTotal');
+        precioTotal.innerText = carrito.reduce((acc, el) => acc + (el.price * el.cantidad), 0)
 }

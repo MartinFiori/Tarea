@@ -45,6 +45,9 @@
         height: 100vh;
         padding: 20px 0 0 0;
         border-radius: 0;
+            & h3{
+                margin-left: 15px;
+            }
     }
 
     .finalizarCompra {

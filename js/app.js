@@ -68,30 +68,3 @@ $.get("./data/productos.json", function (datos, estado) {
 
 })
 
-// Mostrar carrito cuando hay productos dentro
-function showCarrito() {
-
-    if (carrito.length <= 0) {
-        $('#cart').hide(0)
-        $('#cart').animate({
-            "opacity": "0",
-            "top": "100"
-        }, 0)
-
-        console.log('vacio');
-    } else {
-        $('#cart').show(150)
-        $('#cart').animate({
-            "top": "150",
-            "opacity": "1"
-        }, 150)
-        console.log('lleno');
-
-    }
-
-
-}
-function actualizarPrecio() {
-    let precioTotal = document.getElementById('mostrarTotal');
-    precioTotal.innerText = carrito.reduce((acc, el) => acc + (el.price * el.cantidad), 0)
-}
