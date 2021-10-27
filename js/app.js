@@ -68,3 +68,24 @@ $.get("./data/productos.json", function (datos, estado) {
 
 })
 
+
+
+$('#finalizarCompra').click(() => {
+
+    for (const producto of carrito) {
+        Toastify({
+            text: `Su ${producto.name} se está preparando`,
+            className: "info",
+            gravity: "bottom",
+            duration: 2000,
+            style: {
+                background: "#fff",
+                fontSize: "1.45rem",
+                color: "#f00",
+                border: "2px solid #f00",
+                borderRadius: "5px",
+                fontWeight: "bold"
+            }
+        }).showToast();
+    }
+})

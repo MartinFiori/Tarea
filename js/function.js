@@ -16,7 +16,7 @@ function crearCards(array) {
                                 <div class="contenido toggle${element.id}">
                                 <div class="contenido__contador">
                                 <button type="" class="btn-carrito minus minus${element.id}" id="${element.id}">&minus;</button>
-                                <p id=counter${element.id}></p>
+                                <p class="counter" id=counter${element.id}></p>
                                 <button type="" class="btn-carrito plus plus${element.id} buy" id="${element.id}">&plus;</button>
                                 </div>
                                 <div class="contenido__descripcion">
@@ -27,7 +27,7 @@ function crearCards(array) {
                                 </div>
                                 </div>`
                 cardsContainer.appendChild(card)
-
+                // Despliegue de las cards y de la flecha
                 $(`.contenido`).hide()
                 $(`.title${element.id}`).click(function () {
                         $(`.toggle${element.id}`).animate({
@@ -35,12 +35,11 @@ function crearCards(array) {
                                 marginTop: "30px"
                         }, 250)
                 })
-
                 $(`.title${element.id}`).click(function () {
                         $(`.arrow${element.id}`).toggleClass('rotar');
                 })
 
-
+                // Contadores
                 $(`#counter${element.id}`).html("0")
                 let x = $(`#counter${element.id}`).text()
 
