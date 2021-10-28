@@ -4,7 +4,7 @@
         "price": 240,
         "description": "Cono de papas",
         "img": "./assets/productos/papas.jpg",
-        "cantidad":1
+        "cantidad": 1
     },
     {
         "id": 2,
@@ -12,7 +12,7 @@
         "price": 510,
         "description": "Carne sazonada dentro de pan de pita",
         "img": "./assets/productos/shawarma.jpg",
-        "cantidad":1
+        "cantidad": 1
     },
     {
         "id": 3,
@@ -20,7 +20,7 @@
         "price": 440,
         "description": "Medallon, Cheddar, Bacon, Lechuga, Tomate.",
         "img": "./assets/productos/burger.jpg",
-        "cantidad":1
+        "cantidad": 1
     },
     {
         "id": 4,
@@ -28,7 +28,7 @@
         "price": 690,
         "description": "Carne o Pollo o Cerdo o Morcilla + Jamon, Queso, Huevo, Lechuga, Tomate, Arvejas, Choclo y Mayonesa",
         "img": "./assets/productos/shis.jpg",
-        "cantidad":1
+        "cantidad": 1
     },
     {
         "id": 5,
@@ -36,7 +36,7 @@
         "price": 600,
         "description": "Corte fino de carne de la parte intermedia de la vaca o cerdo",
         "img": "./assets/productos/tacos.jpg",
-        "cantidad":1
+        "cantidad": 1
     },
     {
         "id": 6,
@@ -44,7 +44,7 @@
         "price": 320,
         "description": "Masa de harina de trigo frita, rellena de queso blanco",
         "img": "./assets/productos/tequenios.jpg",
-        "cantidad":1
+        "cantidad": 1
     },
     {
         "id": 7,
@@ -52,7 +52,7 @@
         "price": 720,
         "description": "Una fina masa de pan con relleno",
         "img": "./assets/productos/empanadas.jpg",
-        "cantidad":1
+        "cantidad": 1
     },
     {
         "id": 8,
@@ -60,7 +60,7 @@
         "price": 430,
         "description": "Pan plano elaborado con harina de trigo, levadura, agua y sal que tradicionalmente se cubre con salsa de tomate",
         "img": "./assets/productos/pizza.jpg",
-        "cantidad":1
+        "cantidad": 1
     },
     {
         "id": 9,
@@ -68,7 +68,7 @@
         "price": 390,
         "description": "Consisten en capas y capas de totopos de maíz, con todo tipo de salsas picantes, carne picada y queso fundido",
         "img": "./assets/productos/nachos.jpg",
-        "cantidad":1
+        "cantidad": 1
     },
     {
         "id": 10,
@@ -76,6 +76,6 @@
         "price": 130,
         "description": "Canastitas rellenas de jamón, queso y choclo",
         "img": "./assets/productos/canastitas.jpg",
-        "cantidad":1
+        "cantidad": 1
     }
 ]

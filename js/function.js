@@ -49,10 +49,10 @@ function crearCards(array) {
                 })
 
                 $(`.minus${element.id}`).click(() => {
-                        $(`#counter${element.id}`).text(--x)
-
-                        if (x < 0) {
+                        if (x <= 0) {
                                 $(`#counter${element.id}`).html("0")
+                        } else {
+                                $(`#counter${element.id}`).text(--x)
                         }
                 })
         });
@@ -69,16 +69,14 @@ function carritoUI(carrito) {
                         <td>${producto.name}</td>
                         <td>${producto.cantidad}</td>
                         <td>${producto.price}</td>
-                        <td>${subtotal(producto.cantidad,producto.price)}</td>
+                        <td>${producto.subtotal(producto.cantidad,producto.price)}</td>
                 `
                 document.querySelector('#listaCarrito').appendChild(tableRow)
         }
 }
 
 // Función para mostrar el sub-total
-let subtotal = (cantidad, price) => {
-        return cantidad * price
-}
+
 
 
 // Mostrar carrito cuando hay productos dentro

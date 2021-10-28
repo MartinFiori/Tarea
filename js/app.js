@@ -1,10 +1,26 @@
+class Producto {
+    constructor(id, name, price, description, img) {
+        this.id = id
+        this.name = name
+        this.price = price
+        this.description = description
+        this.img = img
+        this.cantidad = 1
+    }
+    subtotal(cantidad, price) {
+        return cantidad * price
+    }
+}
+
 // Renderizo los productos con JSON
 $.get("./data/productos.json", function (datos, estado) {
     console.log(datos);
     console.log(estado);
-    datos.forEach(prod => productos.push(prod))
+    datos.forEach(prod => productos.push((new Producto(prod.id, prod.name, prod.price, prod.description, prod.img, prod.cantidad))))
     crearCards(productos)
     showCarrito(carrito)
+
+
 
     // Agregar Productos al carrito
     let plus = document.querySelectorAll(".plus")
