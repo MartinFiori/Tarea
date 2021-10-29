@@ -107,8 +107,8 @@ function actualizarPrecio() {
 // Resetear tabla, counters y localStorage después de que finaliza la compra
 function reset() {
         carrito = [];
-
-
+        
+        
 
 
         setTimeout(function () {
@@ -116,6 +116,6 @@ function reset() {
                 cart.classList.remove('fa-times')
                 $('.contenido').hide()
                 $('.counter').html(0)
-
+                $('#cart').hide()
         }, 2500);
 }
