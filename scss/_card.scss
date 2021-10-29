@@ -61,15 +61,19 @@
                 text-align: center;
                 width: calc(110px/3);
                 color: #fff;
+                font-weight: 600;
             }
         }
 
         &__descripcion {
             width: 400px;
+            font-weight: 300;
         }
 
         &__precio p {
             font-size: 22px;
+            font-weight: 400;
+            font-style: italic;
         }
     }
 

@@ -1,9 +1,9 @@
 "use strict"
 
 // Activar overlay
-$('#cart').click(() => {
-$('.overlay')
-});
+// $('#cart').click(() => {
+// $('.overlay')
+// });
 
 // Popup 
 document.getElementById('cart').addEventListener("click", () =>{

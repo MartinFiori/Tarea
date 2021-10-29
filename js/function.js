@@ -67,9 +67,9 @@ function carritoUI(carrito) {
                 tableRow.innerHTML +=
                         `
                         <td>${producto.name}</td>
-                        <td>${producto.cantidad}</td>
-                        <td>${producto.price}</td>
-                        <td>${producto.subtotal(producto.cantidad,producto.price)}</td>
+                        <td>x${producto.cantidad}</td>
+                        <td>$${producto.price}</td>
+                        <td>$${producto.subtotal(producto.cantidad,producto.price)}</td>
                 `
                 document.querySelector('#listaCarrito').appendChild(tableRow)
         }
@@ -96,8 +96,26 @@ function showCarrito() {
         }
 }
 
+        $('.counter').html(0)
 // Actualizar el precio del total del carrito
 function actualizarPrecio() {
         let precioTotal = document.getElementById('mostrarTotal');
         precioTotal.innerText = carrito.reduce((acc, el) => acc + (el.price * el.cantidad), 0)
+}
+
+
+// Resetear tabla, counters y localStorage después de que finaliza la compra
+function reset() {
+        carrito = [];
+
+
+
+
+        setTimeout(function () {
+                document.getElementById('popup').classList.remove('active');
+                cart.classList.remove('fa-times')
+                $('.contenido').hide()
+                $('.counter').html(0)
+
+        }, 2500);
 }

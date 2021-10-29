@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrega Final</title>
+    <title>PapasNow</title>
     <!-- ========== Script Toastify ========== -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- ========== Script FontAwesome ========== -->
     <script src="https://kit.fontawesome.com/6050990e90.js" crossorigin="anonymous"></script>
+    <!-- ========== Google Fonts ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,300;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <!-- ========== Icon ========== -->
+    <link rel="Icon" href="./assets/logo.png">
     <!-- ========== Css ========== -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -17,7 +24,7 @@
 <body class="body">
     <i class="cart fas fa-shopping-cart" id="cart"></i>
     <header>
-        <h1 class="title" id="title">PapasNow</h1>
+        <h1 class="title" id="title"><span>Papas</span><span>Now</span></h1>
     </header>
 
 
@@ -45,11 +52,12 @@
 
 
 
-            <div class="cart__texto"><p>Precio Total: $ <span class="mostrarTotal" id="mostrarTotal"></span></p></div>
-            <button class="finalizarCompra" id="finalizarCompra"><span>Finalizar compra</span></button>
+            <div class="cart__texto">
+                <p>Precio Total: <br>$ <span class="mostrarTotal" id="mostrarTotal"></span></p>
+                <button class="finalizarCompra" id="finalizarCompra"><span>Finalizar compra</span></button>
+            </div>
         </div>
     </div>
-
 
 
 

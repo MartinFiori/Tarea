@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Mali', cursive;
 }
 
 .body {
@@ -19,6 +20,12 @@
     font-size:clamp(2.8rem, 7vw, 6rem);
     text-align: center;
     margin-block: 1em;
+        & span:first-of-type{
+            color: #f00;
+        }
+        & span:last-of-type{
+            color: #ff0;
+        }
 }
 
 

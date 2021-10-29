@@ -47,13 +47,16 @@
 
 
 .cart__texto {
-    margin-left: 1rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
     & p {
-        // display: inline;
         font-size: 1.2rem;
-        margin-right: 45px;
-        text-align: right;
-        font-weight: bold;
+        text-align: center;
+        line-height: 1.2rem;
+        vertical-align: middle;
+        font-weight: 500;
     }
 }
 
@@ -69,10 +72,9 @@
     border: 1px solid #f00;
     background-color: #fff;
     color: #f00;
-    font-weight: bold;
+    font-weight: 500;
     cursor: pointer;
     border-radius: 5px;
-    float: right;
     position: relative;
     overflow: hidden;
     z-index: 2;
@@ -93,7 +95,7 @@
         left: calc(-100% - 40px);
         width: 100%;
         border-right: 40px solid transparent;
-        border-bottom: 39px solid #f00;
+        border-bottom: 100px solid #f00;
         transition: all 250ms ease-in-out;
     }
 

@@ -104,4 +104,5 @@ $('#finalizarCompra').click(() => {
             }
         }).showToast();
     }
+    reset()
 })

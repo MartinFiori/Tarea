@@ -14,7 +14,7 @@
             align-items: center;
 
             &__contador {
-                flex-direction: column;
+                flex-direction: column-reverse;
                 width: 62px;
                 height: 110px;
 
@@ -34,7 +34,7 @@
 
     // CARRITO
     .cart {
-        top: 10px !important;
+        top: 3px !important;
         right: 10px;
     }
 
@@ -43,23 +43,28 @@
     .content {
         width: 100vw;
         height: 100vh;
-        padding: 20px 0 0 0;
+        padding: 0;
+        padding-top: 10px;
+        
         border-radius: 0;
             & h3{
                 margin-left: 15px;
+                margin-bottom: 17px;
             }
     }
 
-    .finalizarCompra {
-        margin-right: 30px;
-        margin-top: 5px;
-    }
+.cart__texto{
+    padding-inline: 12px;
+}
+
+
 
     .contenidoTabla {
         border-radius: 0;
+        margin-block: 15px;
         th,
         td {
-            padding: 8px 6px !important;
+            padding: 8px 6px;
         }
     }
 

@@ -1,7 +1,8 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: 'Mali', cursive; }
 
 .body {
   font-size: 62.5%;
@@ -17,6 +18,10 @@
   font-size: clamp(2.8rem, 7vw, 6rem);
   text-align: center;
   margin-block: 1em; }
+  .title span:first-of-type {
+    color: #f00; }
+  .title span:last-of-type {
+    color: #ff0; }
 
 .overlay {
   position: fixed;
@@ -125,11 +130,15 @@
         line-height: 30px;
         text-align: center;
         width: calc(110px/3);
-        color: #fff; }
+        color: #fff;
+        font-weight: 600; }
     .card .contenido__descripcion {
-      width: 400px; }
+      width: 400px;
+      font-weight: 300; }
     .card .contenido__precio p {
-      font-size: 22px; }
+      font-size: 22px;
+      font-weight: 400;
+      font-style: italic; }
   .card .btn-carrito {
     font-size: 25px;
     height: 30px;
@@ -162,38 +171,6 @@
 .rotar {
   transform: rotate(180deg); }
 
-.buscador {
-  background: #fff;
-  position: relative;
-  width: 345px;
-  height: 50px;
-  border: none;
-  outline: none;
-  border-radius: 30px;
-  box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.226);
-  overflow: hidden;
-  font-size: 2rem;
-  margin-block: 2rem; }
-
-.buscador__input {
-  border: none;
-  outline: none;
-  height: 50px;
-  font-size: 2rem; }
-
-.cross {
-  position: absolute;
-  right: 25px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 25px;
-  color: black;
-  cursor: pointer;
-  display: none; }
-
-.display {
-  display: block; }
-
 .contenidoTabla {
   border-collapse: collapse;
   margin: 25px 0;
@@ -224,12 +201,16 @@
     border-bottom: 2px solid #f00; }
 
 .cart__texto {
-  margin-left: 1rem; }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; }
   .cart__texto p {
     font-size: 1.2rem;
-    margin-right: 45px;
-    text-align: right;
-    font-weight: bold; }
+    text-align: center;
+    line-height: 1.2rem;
+    vertical-align: middle;
+    font-weight: 500; }
 
 .mostrarTotal {
   font-size: 1.2rem; }
@@ -241,10 +222,9 @@
   border: 1px solid #f00;
   background-color: #fff;
   color: #f00;
-  font-weight: bold;
+  font-weight: 500;
   cursor: pointer;
   border-radius: 5px;
-  float: right;
   position: relative;
   overflow: hidden;
   z-index: 2; }
@@ -260,7 +240,7 @@
     left: calc(-100% - 40px);
     width: 100%;
     border-right: 40px solid transparent;
-    border-bottom: 39px solid #f00;
+    border-bottom: 100px solid #f00;
     transition: all 250ms ease-in-out; }
   .finalizarCompra:hover::after {
     left: 0; }
@@ -277,7 +257,7 @@ h3 {
       flex-direction: row;
       align-items: center; }
       .card .contenido__contador {
-        flex-direction: column;
+        flex-direction: column-reverse;
         width: 62px;
         height: 110px; }
         .card .contenido__contador p,
@@ -286,20 +266,22 @@ h3 {
         .card .contenido__contador h3 {
           text-align: left; }
   .cart {
-    top: 10px !important;
+    top: 3px !important;
     right: 10px; }
   .content {
     width: 100vw;
     height: 100vh;
-    padding: 20px 0 0 0;
+    padding: 0;
+    padding-top: 10px;
     border-radius: 0; }
     .content h3 {
-      margin-left: 15px; }
-  .finalizarCompra {
-    margin-right: 30px;
-    margin-top: 5px; }
+      margin-left: 15px;
+      margin-bottom: 17px; }
+  .cart__texto {
+    padding-inline: 12px; }
   .contenidoTabla {
-    border-radius: 0; }
+    border-radius: 0;
+    margin-block: 15px; }
     .contenidoTabla th,
     .contenidoTabla td {
-      padding: 8px 6px !important; } }
+      padding: 8px 6px; } }
