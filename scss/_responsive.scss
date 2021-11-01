@@ -45,27 +45,42 @@
         height: 100vh;
         padding: 0;
         padding-top: 10px;
-        
+
         border-radius: 0;
-            & h3{
-                margin-left: 15px;
-                margin-bottom: 17px;
-            }
+
+        & h3 {
+            margin-left: 15px;
+            margin-bottom: 17px;
+        }
     }
 
-.cart__texto{
-    padding-inline: 12px;
-}
+    .cart__texto {
+        padding-inline: 12px;
+    }
 
 
 
     .contenidoTabla {
         border-radius: 0;
         margin-block: 15px;
+
         th,
         td {
             padding: 8px 6px;
         }
     }
 
+    .horarios-contenido {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+
+    .horarios-btn {
+        position: absolute;
+        top: 10px !important;
+        right: 10px !important;
+    }
 }

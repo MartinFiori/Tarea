@@ -96,7 +96,7 @@ function showCarrito() {
         }
 }
 
-        $('.counter').html(0)
+$('.counter').html(0)
 // Actualizar el precio del total del carrito
 function actualizarPrecio() {
         let precioTotal = document.getElementById('mostrarTotal');
@@ -107,15 +107,18 @@ function actualizarPrecio() {
 // Resetear tabla, counters y localStorage después de que finaliza la compra
 function reset() {
         carrito = [];
-        
-        
+
+
 
 
         setTimeout(function () {
                 document.getElementById('popup').classList.remove('active');
                 cart.classList.remove('fa-times')
                 $('.contenido').hide()
-                $('.counter').html(0)
                 $('#cart').hide()
+                $(".counter").text(0)
+                document.getElementById('cardsContainer').innerHTML=""
+                crearCards(productos)
+
         }, 2500);
 }

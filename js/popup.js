@@ -16,3 +16,9 @@ let cart = document.getElementById('cart')
 cart.addEventListener('click', ()=>{
     cart.classList.toggle('fa-times')
 })
+
+
+// popup horario
+document.getElementById('horario-btn').addEventListener('click', ()=>{
+    document.getElementById('popup2').classList.add("closed")
+})
