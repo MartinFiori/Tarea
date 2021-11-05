@@ -31,18 +31,16 @@ $.get("./data/productos.json", function (datos, estado) {
             if (existe == undefined) {
                 const encontrado = productos.find(element => element.id == boton.id);
                 carrito.push(encontrado);
-                carritoUI(carrito)
-                localStorage.setItem('idProducto', JSON.stringify(carrito));
-                showCarrito()
-                actualizarPrecio()
-
             } else {
                 existe.cantidad = existe.cantidad + 1
                 carritoUI(carrito)
                 localStorage.setItem('idProducto', JSON.stringify(carrito));
                 actualizarPrecio()
-
             }
+            carritoUI(carrito)
+            localStorage.setItem('idProducto', JSON.stringify(carrito));
+            showCarrito()
+            actualizarPrecio()
         })
     })
 
@@ -55,54 +53,20 @@ $.get("./data/productos.json", function (datos, estado) {
             const existe = carrito.find(element => element.id == boton.id)
             if (existe == undefined) {
                 const encontrado = productos.find(element => element.id == boton.id)
-                carritoUI(carrito)
-                localStorage.setItem('idProducto', JSON.stringify(carrito));
-                actualizarPrecio()
-
-
             } else {
                 if (existe.cantidad > 1) {
                     existe.cantidad = existe.cantidad - 1
-                    carritoUI(carrito)
-                    localStorage.setItem('idProducto', JSON.stringify(carrito));
-                    showCarrito()
-                    actualizarPrecio()
-
                 } else {
                     carrito = carrito.filter(element => element.id != existe.id)
-                    carritoUI(carrito)
-                    localStorage.setItem('idProducto', JSON.stringify(carrito));
-                    showCarrito()
-                    actualizarPrecio()
                 }
-
+                localStorage.setItem('idProducto', JSON.stringify(carrito));
+                carritoUI(carrito)
+                showCarrito()
+                actualizarPrecio()
             }
         })
     })
-
-
-
 })
 
 
 
-$('#finalizarCompra').click(() => {
-
-    for (const producto of carrito) {
-        Toastify({
-            text: `Su ${producto.name} se está preparando`,
-            className: "info",
-            gravity: "bottom",
-            duration: 2000,
-            style: {
-                background: "#fff",
-                fontSize: "1.45rem",
-                color: "#f00",
-                border: "2px solid #f00",
-                borderRadius: "5px",
-                fontWeight: "bold"
-            }
-        }).showToast();
-    }
-    reset()
-})

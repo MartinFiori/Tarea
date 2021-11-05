@@ -1,0 +1,39 @@
+.validaciones {
+    width: 400px;
+    height: auto;
+    background: #fafafa;
+    position: fixed;
+    color: #000;
+    border-radius: 15px;
+    outline: 5px solid #f00;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 10px;
+    &-content{
+        text-align: center;
+            & p{
+                font-size: 1.5rem;
+            }
+    }
+}
+
+
+.valid-closeBtn {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    font-size: 30px;
+    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 30px;
+    background: #f00;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+

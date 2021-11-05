@@ -1,0 +1,150 @@
+.formOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.containerForm {
+    background: #fff;
+    width: 600px;
+    height: 600px;
+    padding: 2rem;
+
+    position: fixed;
+    top: -500%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    transition: all 500ms ease;
+}
+
+.formulario {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+
+    &>input,
+    &>select,
+    & .cantidadPago {
+        border: 2px solid #f00;
+        padding: .3em;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+            background: #fafafa;
+        }
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+}
+
+.opcionesPedidos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & button {
+        width: 45%;
+        padding: 1rem;
+        font-size: 1.3rem;
+        cursor: pointer;
+        transition: background 200ms ease-in, color 200ms ease-in;
+        border-radius: 5px;
+        background: #fff;
+
+        &:first-child {
+            border: 2px solid #E60023;
+            color: #E60023;
+
+            &:hover {
+                background: #E60023;
+                color: #fff;
+            }
+        }
+
+        &:last-child {
+            border: 2px solid #25D366;
+            color: #25D366;
+
+            &:hover {
+                background: #25D366;
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+
+
+.popup-3.move .formOverlay {
+    display: block;
+}
+
+
+.popup-3.move .containerForm {
+    top: 50%;
+    left: 50%;
+    right: 0;
+    transition: all 500ms ease;
+}
+
+
+
+
+.qr {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin-inline: auto;
+}
+
+
+.inputDebito {
+    flex-basis: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.debitoContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 2px solid #f00;
+    outline: none;
+    padding: .3em;
+    font-size: 1.3rem;
+    border-radius: 5px;
+
+    & input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    &>div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    & img {
+        height: 30px;
+        width: auto;
+        opacity: .5;
+    }
+}

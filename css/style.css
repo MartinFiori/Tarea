@@ -38,7 +38,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  height: auto;
   width: 600px;
   background: #fff;
   border-radius: 30px;
@@ -215,7 +214,7 @@
 .mostrarTotal {
   font-size: 1.2rem; }
 
-.finalizarCompra {
+.continuar {
   font-size: 1.2rem;
   padding: 0.5rem;
   margin-block: 1rem;
@@ -228,11 +227,11 @@
   position: relative;
   overflow: hidden;
   z-index: 2; }
-  .finalizarCompra span {
+  .continuar span {
     z-index: 2; }
-  .finalizarCompra:hover {
+  .continuar:hover {
     color: #fff; }
-  .finalizarCompra::after {
+  .continuar::after {
     content: '';
     position: absolute;
     top: 0;
@@ -242,7 +241,7 @@
     border-right: 40px solid transparent;
     border-bottom: 100px solid #f00;
     transition: all 250ms ease-in-out; }
-  .finalizarCompra:hover::after {
+  .continuar:hover::after {
     left: 0; }
 
 h3 {
@@ -262,7 +261,8 @@ h3 {
         height: 110px; }
         .card .contenido__contador p,
         .card .contenido__contador button {
-          height: calc(110px/3); }
+          height: calc(110px/3);
+          width: auto; }
         .card .contenido__contador h3 {
           text-align: left; }
   .cart {
@@ -284,7 +284,8 @@ h3 {
     margin-block: 15px; }
     .contenidoTabla th,
     .contenidoTabla td {
-      padding: 8px 6px; }
+      padding: 8px 6px;
+      font-size: 1.1rem; }
   .horarios-contenido {
     position: fixed;
     top: 0;
@@ -294,14 +295,24 @@ h3 {
   .horarios-btn {
     position: absolute;
     top: 10px !important;
-    right: 10px !important; } }
+    right: 10px !important; }
+  .containerForm {
+    width: 100vw !important;
+    height: 100vh !important;
+    padding: 0 !important;
+    padding: 1rem .3rem !important; }
+  .validaciones {
+    width: 90vw !important;
+    height: 80vh !important;
+    display: flex;
+    align-items: center; } }
 
 .horarios-contenido {
   position: fixed;
   font-size: 1.25rem;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(0);
   height: auto;
   width: auto;
   background: #fff;
@@ -341,10 +352,155 @@ h3 {
   min-width: 100vw;
   background: rgba(0, 0, 0, 0.6);
   z-index: 10;
-  display: block; }
+  display: none; }
 
 .popup-2.closed .horarios-contenido {
-  transform: translate(-50%, -50%) scale(0); }
+  transform: translate(-50%, -50%) scale(1); }
 
 .popup-2.closed .horarios-overlay {
+  display: block; }
+
+.formOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
   display: none; }
+
+.containerForm {
+  background: #fff;
+  width: 600px;
+  height: 600px;
+  padding: 2rem;
+  position: fixed;
+  top: -500%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  transition: all 500ms ease; }
+
+.formulario {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 100%; }
+  .formulario > input,
+  .formulario > select,
+  .formulario .cantidadPago {
+    border: 2px solid #f00;
+    padding: .3em;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    width: 100%; }
+    .formulario > input:focus,
+    .formulario > select:focus,
+    .formulario .cantidadPago:focus {
+      outline: none;
+      background: #fafafa; }
+  .formulario h3 {
+    text-align: center; }
+  .formulario p {
+    font-size: 1.3rem; }
+
+.opcionesPedidos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  .opcionesPedidos button {
+    width: 45%;
+    padding: 1rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background 200ms ease-in, color 200ms ease-in;
+    border-radius: 5px;
+    background: #fff; }
+    .opcionesPedidos button:first-child {
+      border: 2px solid #E60023;
+      color: #E60023; }
+      .opcionesPedidos button:first-child:hover {
+        background: #E60023;
+        color: #fff; }
+    .opcionesPedidos button:last-child {
+      border: 2px solid #25D366;
+      color: #25D366; }
+      .opcionesPedidos button:last-child:hover {
+        background: #25D366;
+        color: #fff; }
+
+.popup-3.move .formOverlay {
+  display: block; }
+
+.popup-3.move .containerForm {
+  top: 50%;
+  left: 50%;
+  right: 0;
+  transition: all 500ms ease; }
+
+.qr {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-inline: auto; }
+
+.inputDebito {
+  flex-basis: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem; }
+
+.debitoContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 2px solid #f00;
+  outline: none;
+  padding: .3em;
+  font-size: 1.3rem;
+  border-radius: 5px; }
+  .debitoContainer input::-webkit-outer-spin-button,
+  .debitoContainer input::-webkit-inner-spin-button {
+    -webkit-appearance: none; }
+  .debitoContainer > div {
+    display: flex;
+    flex-direction: row; }
+  .debitoContainer img {
+    height: 30px;
+    width: auto;
+    opacity: .5; }
+
+.validaciones {
+  width: 400px;
+  height: auto;
+  background: #fafafa;
+  position: fixed;
+  color: #000;
+  border-radius: 15px;
+  outline: 5px solid #f00;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 10px; }
+  .validaciones-content {
+    text-align: center; }
+    .validaciones-content p {
+      font-size: 1.5rem; }
+
+.valid-closeBtn {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  font-size: 30px;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  background: #f00;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer; }

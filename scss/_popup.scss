@@ -11,10 +11,10 @@
 
 .content {
     position: fixed;
+    // overflow: hidden;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    height: auto;
     width: 600px;
     background: #fff;
     border-radius: 30px;

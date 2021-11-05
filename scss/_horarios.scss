@@ -3,7 +3,7 @@
     font-size: 1.25rem;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(0);
     height: auto;
     width: auto;
     background: #fff;
@@ -50,14 +50,14 @@
     min-width: 100vw;
     background: rgba(0, 0, 0, 0.6);
     z-index: 10;
-    display: block;
+    display: none;
 }
 
 
 .popup-2.closed .horarios-contenido {
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .popup-2.closed .horarios-overlay {
-    display: none;
+    display: block;
 }
