@@ -1,6 +1,4 @@
 "use strict"
-
-
 // Crear las cards, el slideDown, rotar las flechas y agregar los largos de cada contador
 function crearCards(array) {
         array.forEach(element => {
@@ -103,69 +101,11 @@ function actualizarPrecio() {
         precioTotal.innerText = carrito.reduce((acc, el) => acc + (el.price * el.cantidad), 0)
 }
 
-// Verificación datos "completa datos"
-
-// Aparece el input de con cuanto abona
-// let pago = document.getElementById('pago')
-// let containerMetodosPagos = document.getElementById('containerMetodosPagos')
 
 
 
+// Variables de las validaciones para el formulario
 $('#validaciones').hide()
-// // Validación de los inputs de cuando se piden los datos
-// let mostrarTotal = document.querySelector('#mostrarTotal')
-// // let cantidadPago = document.querySelector('#cantidadPago')
-// let inputDebito = document.querySelector('#inputDebito')
-// // console.log(cantidadPago);
-// document.getElementById('finalizarPedido').addEventListener('click', (e) => {
-//         e.preventDefault()
-//         if ((document.getElementById('name').value === "") || (document.getElementById('address').value === "") || document.getElementById('pago').value === "disabled") {
-//                 document.getElementById('validaciones-content').innerHTML = ""
-//                 $('#validaciones').fadeIn()
-//                 let validacionesContent = document.createElement("div")
-//                 validacionesContent.innerHTML = `
-//                                                 <h3>Ups!</h3>
-//                                                 <p>Por favor, complete los datos solicitados correctamente</p>
-//                                                 `
-//                 document.getElementById('validaciones-content').appendChild(validacionesContent)
-//         } else if ((cantidadPago.value - mostrarTotal.innerText) >= 0) {
-//                 Toastify({
-//                         text: `Redireccionando para enviar su comanda por Whastapp. Aguarde Por favor!`,
-//                         duration: 3000,
-//                         gravity: "top",
-//                         position: "center",
-//                         stopOnFocus: true,
-//                         style: {
-//                                 background: "linear-gradient(to right, #25D366, #96c93d)",
-//                                 fontSize: "1.2rem",
-//                                 borderRadius: "10px",
-//                         },
-//                 }).showToast();
-
-//                 setTimeout(() => {
-//                         location.href = "https://api.whatsapp.com/send?phone=+5491161726970"
-//                 }, 3500);
-//         } else if ((cantidadPago.value - mostrarTotal.innerText) < 0) {
-//                 document.getElementById('validaciones-content').innerHTML = ""
-//                 $('#validaciones').fadeIn()
-//                 let validacionesContent = document.createElement("div")
-//                 validacionesContent.innerHTML = `
-//                                                 <h3>Ups!</h3>
-//                                                 <p>Faltan $${mostrarTotal.innerText-cantidadPago.value} para abonar la totalidad del pedido</p>
-//                                                 `
-//                 document.getElementById('validaciones-content').appendChild(validacionesContent)
-//         }
-
-//         // const vaciarCarrito = document.getElementById('vaciar');
-//         // vaciarCarrito.addEventListener('click', () => {
-//         //         carrito.length = 0;
-//         //         document.getElementById('contenedorCarrito').innerHTML = ` `
-//         // })
-// })
-
-
-
-
 let inputName = document.getElementById('name')
 let inputAddress = document.getElementById('address')
 let textoTotal = document.getElementById('totalForm')
@@ -173,11 +113,10 @@ const finalizarPedido = document.getElementById('finalizarPedido')
 let metodoPago = document.getElementById('pago')
 let containerValidaciones = document.getElementById('validaciones-content')
 let containerMetodosPagos = document.getElementById('containerMetodosPagos')
-// let longitud = document.getElementById('inputDebito').value;
-// console.log(longitud);
 
 
 
+// Validación formulario datos de envio
 finalizarPedido.addEventListener('click', (e) => {
         e.preventDefault()
         if (inputName.value === "" || !isNaN(inputName.value) || inputAddress.value === "" || metodoPago.value === "disabled") {
@@ -192,6 +131,8 @@ finalizarPedido.addEventListener('click', (e) => {
         }
 })
 
+
+// Despliegue de los métodos de pago
 metodoPago.addEventListener('change', () => {
         if (metodoPago.value === "efectivo") {
                 let cantidadPago = document.getElementById('cantidadPago')
@@ -205,13 +146,11 @@ metodoPago.addEventListener('change', () => {
 
                 if (inputDebito) {
                         inputDebito.remove()
-                        console.log("se burró input debito desde metodo efectivo");
                 } else if (qr) {
                         qr.remove()
-                        console.log("se borró QR desde método efectivo");
                 }
 
-
+                // Chequeo del pago en efectivo
                 finalizarPedido.addEventListener('click', () => {
                         let cantidadPago = document.getElementById('cantidadPago')
                         if (inputName.value != "" && isNaN(inputName.value) && inputAddress.value != "") {
@@ -235,7 +174,6 @@ metodoPago.addEventListener('change', () => {
                                                 }, 3500);
                                         }
                                         if (cantidadPago.value === "") {
-                                                console.log("conhtenido vacio");
                                                 containerValidaciones.innerHTML = ""
                                                 $('#validaciones').fadeIn()
                                                 let validacionesContent = document.createElement("div")
@@ -260,6 +198,7 @@ metodoPago.addEventListener('change', () => {
                 })
         }
 
+        // Pago con mercado pago
         if (metodoPago.value === "mercadopago") {
                 let cantidadPago = document.getElementById('cantidadPago')
                 let inputDebito = document.getElementById('inputDebito')
@@ -270,17 +209,15 @@ metodoPago.addEventListener('change', () => {
                 containerMetodosPagos.appendChild(img)
                 if (cantidadPago) {
                         cantidadPago.remove()
-                        console.log("se borró el input de efectivo desde mercadoPago");
                 } else if (inputDebito) {
                         inputDebito.remove()
-                        console.log("se borró el input de debito desde mercado pago");
                 }
         }
 
+        // pago con tarjeta
         if (metodoPago.value === "tarjeta") {
                 let cantidadPago = document.getElementById('cantidadPago')
                 let qr = document.getElementById('qr')
-                // console.log(inputDebito);
 
 
                 containerMetodosPagos.innerHTML = ""
@@ -298,12 +235,11 @@ metodoPago.addEventListener('change', () => {
                 containerMetodosPagos.appendChild(field)
                 if (qr) {
                         qr.remove()
-                        console.log("se borró qr desde tarjeta");
                 } else if (cantidadPago) {
                         cantidadPago.remove()
-                        console.log("se borro cantidad pago desde qr");
                 }
 
+                // Redirección a whatsapp una vez checqueado todo 
                 finalizarPedido.addEventListener('click', () => {
                         let inputDebito = document.getElementById('inputDebito')
                         if (inputDebito.value.length == 16) {
@@ -327,18 +263,33 @@ metodoPago.addEventListener('change', () => {
                                 containerValidaciones.innerHTML = ""
                                 $('#validaciones').fadeIn()
                                 let validacionesContent = document.createElement("div")
-                                validacionesContent.innerHTML = `
-                                                                                <h3>Ups!</h3>
-                                                                                <p>Faltan ${16-inputDebito.value.length} números para que el número de la tarjeta sea válido</p>
-                                                                                `
+                                validacionesContent.innerHTML =
+                                        `
+                                                                <h3>Ups!</h3>
+                                                                <p>Faltan ${16-inputDebito.value.length} números para que el número de la tarjeta sea válido</p>
+                                                                `
                                 document.getElementById('validaciones-content').appendChild(validacionesContent)
-
                         }
-
                 })
         }
-
 })
 
+// Botón cancelar pedido
+document.querySelector('#cancelarPedido').addEventListener('click', () => {
+        Toastify({
+                text: `Esperamos Poder ayudarlo la próxima vez!`,
+                duration: 3000,
+                gravity: "top",
+                position: "center",
+                stopOnFocus: true,
+                style: {
+                        background: "linear-gradient(to right, #EE005F, #325082)",
+                        fontSize: "1.2rem",
+                        borderRadius: "10px",
+                },
+        }).showToast();
 
-let num = 16
+        setTimeout(() => {
+                location.reload()
+        }, 3500);
+})
